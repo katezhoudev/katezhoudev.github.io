@@ -61,7 +61,7 @@ const drawingDesc = [
   "rainbow Starbucks",
   "mm stawberry",
   "I love blueberrys and the color blue!",
-  "peeches",
+  "peaches",
   "nock nock! A woodpecker",
   "a happy girl",
   "anime", 
@@ -71,7 +71,47 @@ const drawingDesc = [
   "lets go to the beech",
   "chinese food",
   "a cool girl",
-  "cubes can create anything!"
+  "cubes can create anything!",
+  "christmas!",
+  "devel + angel",
+  "cupid",
+  "my zoiac sign in human",
+  "school starts!",
+  "Kate!",
+  "snow",
+  "Raven in teen titens go",
+  "FLOATING flower girl",
+  "VSCO girl (girly girl)",
+  "rock'n mermaid",
+  "Mom is a cook!",
+  "mermaid",
+  "DJ",
+  "dog girl",
+  "splash!",
+  "gamer girl",
+  "california",
+  "Fall witch girl",
+  "cute bunny girl",
+  "thunderdtorm",
+  "phenex",
+  "pengin",
+  "close up girl",
+  "4 years ago me and my woderful dad!",
+  "look at that dress!",
+  "cool girl",
+  "YAY we are at the beach",
+  "teacher",
+  "a girl/ME!",
+  "waves",
+  "ordinary girl",
+  "mulan",
+  "A unicorn and a girl",
+  "CHIPS!",
+  "flower dress",
+  "a dalmatian as a human",
+  "a old car",
+  "dogs"
+
 ];
 
 const graphicsDesc = [
@@ -99,7 +139,13 @@ const paintingDesc = [
  "A water fall",
  "save the trees",
  "a lot of flowers",
- "pink!"
+ "pink!",
+ "birb tree",
+ "vase",
+ "quilt",
+ "mountain",
+ "cherry girl",
+ "blue girl in a blue world"
 ];
 
 const artDesc = [drawingDesc, paintingDesc, graphicsDesc];
