@@ -13,6 +13,19 @@ img {
   width: auto;
   height: calc(100vh - 40px);
   margin-top: 20px;
-  object-fit: cover;
+  object-fit: contain;
   max-width: initial;
+}
+
+
+@media (max-width: 1320px) {
+
+  img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    object-fit: contain;
+    /* max-width: initial; */
+  }
+  
 }
