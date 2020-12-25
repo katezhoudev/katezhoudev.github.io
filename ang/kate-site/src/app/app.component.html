@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <nav class="nav">
+    <input type="checkbox" id="check">
+    <label for="check" class="nav-icon"><i class="fas fa-bars"></i></label>
+    <div class="logo">
+      <a href="./home"><img src="../assets/logo.png" /></a>
+    </div>
+    <div id="mainListDiv" class="main_list">
+      <ul class="navlinks">
+        <li><a routerLink="/drawing" routerLinkActive="active">My drawings</a></li>
+        <li><a routerLink="/painting" routerLinkActive="active">My paintings</a></li>
+        <li><a routerLink="/graphics" routerLinkActive="active">My graphics</a></li>
+        <li><a routerLink="./animation" routerLinkActive="active">My animations</a></li>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>      
+</div>
+

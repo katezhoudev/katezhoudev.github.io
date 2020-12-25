@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
+
+.nav {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  line-height: 70px;
+  text-align: center;
+  z-index: 10;
+  display: block;
+  background-color: rgb(130, 118, 187);
+}
+
+.nav div.logo {
+  float: left;
+  width: auto;
+  height: auto;
+  padding-left: 3rem;
+}
+
+.nav div.main_list {
+  float: right;
+  height: 65px;
+  padding-left: 20px;
+}
+
+.nav div.main_list ul {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav div.main_list ul li {
+  width: auto;
+  height: 70px;
+  padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  line-height: 65px;
+  font-size: 1.4rem;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+.nav div.main_list ul li a:hover {
+  background-color: rgb(246, 156, 156);
+  transition: 0.5s;
+}
+.nav div.main_list ul li a.active {
+  background-color: lightcoral;
+}
+
+.nav .nav-icon {
+  height: 100%;
+  justify-content: center;
+  float: right;
+  margin-right: 30px;
+  display: none;
+}
+.nav i {
+  line-height: 70px;
+  font-size: 30px;
+  color:lightcoral;
+}
+
+#check {
+  display: none;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+
+@media (max-width: 950px) {
+
+  .nav .nav-icon {
+    display: block;
+  }
+  
+  .nav .nav-icon:hover {
+    cursor: pointer;
+  }
+  .nav div.main_list{
+    position: fixed;
+    top: 70px;
+    left: 100%;
+    width: 70%;
+    height: 100vh;
+    background: rgba(3, 101, 182, 0.8);
+    text-align: center;
+    /* opacity: 1; */
+    transition: all 0.5s;
+    z-index: 10;
+  }
+
+  .nav div.main_list ul{
+    width: 100%;
+    padding-top: 20px;
+    display: block;
+  }
+
+  .nav div.main_list ul li a{
+    font-size: 20px;
+  }
+  .nav div.main_list ul li a:hover, .nav div.main_list ul li a:target {
+    background: none;
+    color: lightcoral;
+  }
+
+  #check:checked ~ div.main_list {
+    left: 35%;
+  }
+  
+  .middle-area {
+    position: fixed !important;
+    top: 70px;
+    width: 100%;
+    overflow: hidden;
+    
+  }
+}
