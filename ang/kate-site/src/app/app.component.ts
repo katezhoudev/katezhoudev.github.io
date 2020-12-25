@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-// import { Event } from '@angular/router';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,9 +6,12 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+
+export class AppComponent implements OnInit, AfterViewInit{
+
   title = 'kate-site';
   artType = 'drawing';
+  isChecked = false;
 
   constructor(private router: Router) { }
 
@@ -17,4 +19,15 @@ export class AppComponent implements OnInit{
     // this.artType = this.router.url.substr(1);
   }
 
+  ngAfterViewInit(): void {
+  }
+
+  hideNav(): void {
+    this.isChecked = false;
+  }
+
+  checkboxChanged(status: boolean): void {
+    this.isChecked = status;
+    console.log(this.isChecked);
+  }
 }
