@@ -6,13 +6,15 @@ import { FormsModule } from '@angular/forms';
 
 import { SliderComponent } from './slider/slider.component';
 import { ArtsService } from './arts.service';
+import { VideoComponent } from './video/video.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RoutingComponent,
-    SliderComponent
+    SliderComponent,
+    VideoComponent,
   ],
   imports: [
     BrowserModule,
