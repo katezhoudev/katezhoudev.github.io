@@ -2,7 +2,7 @@
   <div class="d-flex flex-wrap align-items-center justify-content-center">
     <div *ngFor="let art of arts" class="card mb-5">
       <img class="img-fluid" id={{art.id}} (click)="showSlide(art.id)"
-           src="../assets/arts/{{artType}}/{{artType}}{{art.id}}-512.png" loading="lazy">
+           src="../assets/arts/{{artType}}/{{artType}}{{art.id}}-512.{{artType==='animation'?'gif':'png'}}" loading="lazy">
       <p class="card-footer">{{art.desc}}</p>
     </div>
   </div>

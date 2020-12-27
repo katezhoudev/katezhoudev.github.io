@@ -110,7 +110,7 @@ export class ArtsService {
    {id: 11, desc: 'blue girl in a blue world'}
   ];
   animations = [
-    {id: 0, desc: 'Chritsmas trees'}
+    {id: 0, desc: 'flying bird'}
   ];
 
   constructor() { }
