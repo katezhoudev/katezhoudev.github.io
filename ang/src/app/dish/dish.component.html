@@ -1,0 +1,27 @@
+<div id="dishDiv">
+  <div #dishContainer id="dishContainer">
+    <div *ngFor="let dish of dishes" class="card">
+      <div class="header">
+      </div>
+      <div class="text">
+        <h1 class="food">
+            {{dish.title}}
+        </h1>
+        <i class="fa fa-clock"> {{dish.time}} Mins</i>
+        <i class="fa fa-users"> Serves {{dish.serve}}</i>
+        
+        <div class="stars">
+            <li>
+              <a><i class="fa fa-star"></i></a>
+              <a><i class="fa fa-star"></i></a>
+              <a><i class="fa fa-star"></i></a>
+              <a><i class="fa fa-star"></i></a>
+              <a><i class="fa fa-star-o" aria-hidden="true"></i></a>
+            </li>
+        </div>
+        <p class="info">{{dish.desc}}</p>
+      </div>
+      <a href="#" class="btn">Let's Cook!</a>
+    </div>
+  </div>
+</div>

@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { SliderComponent } from './slider/slider.component';
 import { ArtsService } from './arts.service';
 import { VideoComponent } from './video/video.component';
+import { DishService } from './dish.service';
+import { DishComponent } from './dish/dish.component';
 
 
 @NgModule({
@@ -15,13 +17,14 @@ import { VideoComponent } from './video/video.component';
     RoutingComponent,
     SliderComponent,
     VideoComponent,
+    DishComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [ ArtsService ],
+  providers: [ ArtsService, DishService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

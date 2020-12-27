@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ArtsComponent } from './arts/arts.component';
+import { DishComponent } from './dish/dish.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { VideoComponent } from './video/video.component';
 
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path: 'painting', component: ArtsComponent},
   {path: 'graphics', component: ArtsComponent},
   {path: 'animation', component: ArtsComponent},
-  {path: 'video', component: VideoComponent}
+  {path: 'video', component: VideoComponent},
+  {path: 'dish', component: DishComponent},
 ];
 
 @NgModule({
