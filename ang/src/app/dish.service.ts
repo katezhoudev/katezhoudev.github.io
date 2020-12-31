@@ -6,6 +6,7 @@ export interface Dish {
   desc: string;
   time: number;
   serve: number;
+  steps: string[];
 }
 
 @Injectable({
@@ -14,17 +15,27 @@ export interface Dish {
 export class DishService {
 
   dishes: Dish[] = [
-    {id: 0, title: 'Chinese noodle', desc: 'this is a delicous dish', time: 15, serve: 4},
-    {id: 1, title: 'Kongpu chicken', desc: 'another delicous dish', time: 30, serve: 6},
-    {id: 2, title: 'general chicken', desc: 'traditional delicous dish', time: 20, serve: 5},
-    {id: 3, title: 'Chinese noodle', desc: 'this is a delicous dish', time: 15, serve: 4},
-    {id: 4, title: 'Kongpu chicken', desc: 'another delicous dish', time: 30, serve: 6},
-    {id: 5, title: 'general chicken', desc: 'traditional delicous dish', time: 20, serve: 5},
-    {id: 6, title: 'Chinese noodle', desc: 'this is a delicous dish', time: 15, serve: 4},
-    {id: 7, title: 'Kongpu chicken', desc: 'another delicous dish', time: 30, serve: 6},
-    {id: 8, title: 'general chicken', desc: 'traditional delicous dish', time: 20, serve: 5},
-    {id: 9, title: 'Chinese noodle', desc: 'this is a delicous dish', time: 15, serve: 4},
-    {id: 10, title: 'Kongpu chicken', desc: 'another delicous dish', time: 30, serve: 6},
+    {id: 0, title: 'Chinese noodle', desc: 'this is a delicous dish', time: 15, serve: 4,
+     steps: ['1. clean up the dishes',
+             '2. put the flour, and make the cake',
+             '3. put in the dish',
+             '4. decorate the the dish with the fruit',
+             '5. present to the customer']
+    },
+    {id: 1, title: 'Kongpu chicken', desc: 'another delicous dish', time: 30, serve: 6,
+      steps: ['1. clean up the dishes',
+              '2. put the flour, and make the cake',
+              '3. put in the dish',
+              '4. decorate the the dish with the fruit',
+              '5. present to the customer']
+    },
+    {id: 2, title: 'general chicken', desc: 'traditional delicous dish', time: 20, serve: 5,
+      steps: ['1. clean up the dishes',
+              '2. put the flour, and make the cake',
+              '3. put in the dish',
+              '4. decorate the the dish with the fruit',
+              '5. present to the customer']
+    }
    ];
 
   constructor() { }

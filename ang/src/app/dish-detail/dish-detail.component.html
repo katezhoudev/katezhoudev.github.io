@@ -1,0 +1,21 @@
+<div id="dishDiv">
+  <div #dishContainer id="dishContainer">
+    <div class="left">
+      <img src='http://img.taste.com.au/UZVXAdo7/taste/2016/11/chinese-egg-noodle-and-vegetable-stir-fry-94186-1.jpeg' width="80%" >
+      <div class="text">
+        <h1 class="food">
+            {{dish.title}}
+        </h1>
+        <i class="fa fa-clock"> {{dish.time}} Mins</i>
+        <i class="fa fa-users"> Serves {{dish.serve}}</i>
+      </div>  
+    </div>
+    <div class="steps">
+      <h1>Steps</h1>
+      <p *ngFor='let step of dish.steps'>
+        {{step}}
+      </p>
+    </div>
+
+  </div>
+</div>

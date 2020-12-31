@@ -9,6 +9,7 @@ import { ArtsService } from './arts.service';
 import { VideoComponent } from './video/video.component';
 import { DishService } from './dish.service';
 import { DishComponent } from './dish/dish.component';
+import { DishDetailComponent } from './dish-detail/dish-detail.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { DishComponent } from './dish/dish.component';
     SliderComponent,
     VideoComponent,
     DishComponent,
+    DishDetailComponent,
   ],
   imports: [
     BrowserModule,
