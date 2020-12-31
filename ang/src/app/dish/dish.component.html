@@ -1,7 +1,7 @@
 <div id="dishDiv">
   <div #dishContainer id="dishContainer">
     <div *ngFor="let dish of dishes" class="card">
-      <div class="header">
+      <div class="header" style="background: url('../../assets/dishes/dish{{dish.id}}-512.png') no-repeat center;">
       </div>
       <div class="text">
         <h1 class="food">
@@ -21,7 +21,7 @@
         </div>
         <p class="info">{{dish.desc}}</p>
       </div>
-      <a href="#" class="btn">Let's Cook!</a>
+      <a href="/dish/{{dish.id}}" class="btn">Let's Cook!</a>
     </div>
   </div>
 </div>

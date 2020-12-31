@@ -16,13 +16,17 @@
 
 #dishContainer .left {
   width: 50%;
-  background: #17BEBB;
+  /* background: #17BEBB; */
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   /* margin-left: 20px */
+}
+
+#dishContainer .left h1 {
+  text-align: center;
 }
 
 #dishContainer .fa-clock {
@@ -35,8 +39,9 @@
 
 
 #dishContainer .steps {
-  width: 50%;
-  background: #FFE500;
+  width: 40%;
+  /* background: #17BEBB; */
+  margin-left: 20px;
   padding-left: 50px;
 }
 

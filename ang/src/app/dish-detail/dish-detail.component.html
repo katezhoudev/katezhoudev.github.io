@@ -1,7 +1,7 @@
 <div id="dishDiv">
   <div #dishContainer id="dishContainer">
     <div class="left">
-      <img src='http://img.taste.com.au/UZVXAdo7/taste/2016/11/chinese-egg-noodle-and-vegetable-stir-fry-94186-1.jpeg' width="80%" >
+      <img src='../../assets/dishes/dish{{dish.id}}-512.png' width="80%" >
       <div class="text">
         <h1 class="food">
             {{dish.title}}
@@ -11,11 +11,11 @@
       </div>  
     </div>
     <div class="steps">
-      <h1>Steps</h1>
+      <h1>步骤</h1>
       <p *ngFor='let step of dish.steps'>
         {{step}}
       </p>
     </div>
-
   </div>
 </div>
+<a href="/dishes" style="display: block; width: 100%; text-align: right; font-size: 50px; color: black; padding-right: 50px; margin-top: -100px">back</a>

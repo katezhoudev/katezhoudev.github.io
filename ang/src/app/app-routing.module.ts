@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'animation', component: ArtsComponent},
   {path: 'video', component: VideoComponent},
   {path: 'dishes', component: DishComponent},
-  {path: 'dish', component: DishDetailComponent}
+  {path: 'dish/:id', component: DishDetailComponent}
 ];
 
 @NgModule({
