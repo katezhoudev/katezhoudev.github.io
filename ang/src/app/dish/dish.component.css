@@ -62,7 +62,7 @@
   
 #dishContainer a.btn {
   display: block;
-  background: #EF3E36;
+  background: #17BEBB;
   color: white;
   position: relative;
   text-transform: uppercase;
@@ -73,6 +73,6 @@
 }
 
 #dishContainer a.btn:hover {
-  background: #17BEBB;
+  background: #EF3E36;
   transition: 250ms;
 }
