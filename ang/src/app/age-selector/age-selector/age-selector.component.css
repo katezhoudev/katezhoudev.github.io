@@ -1,0 +1,48 @@
+.age-selector {
+    display: flex;
+    flex-direction: column;
+}
+
+.age-selector a {
+    color: black;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: normal;
+    margin-right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.age-selector a:hover {
+  text-decoration: none;
+}
+ 
+.age-selector a:hover span {
+    background: #b4b9a8;
+}
+
+.age-selector a.active span {
+    background: #ACCF5B;
+}
+
+.age-selector a span {
+    box-sizing: border-box;
+    color: white;
+    background: #dbdfd3;
+    display: block;
+    margin: 0 auto 10px;
+    padding-top: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.age-selector-line {
+    align-self: center;
+    margin-top: -10px;
+	width: 2px;
+	height: 105px;
+	background-color: rgb(60, 60, 60);
+	z-index: -1;
+}

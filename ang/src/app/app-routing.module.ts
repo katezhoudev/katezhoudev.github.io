@@ -9,10 +9,10 @@ import { DishDetailComponent} from './dish-detail/dish-detail.component';
 const routes: Routes = [
   {path: '', component: JumbotronComponent},
   {path: 'home', component: JumbotronComponent},
-  {path: 'drawing', component: ArtsComponent},
-  {path: 'painting', component: ArtsComponent},
+  {path: 'drawings', component: ArtsComponent},
+  {path: 'paintings', component: ArtsComponent},
   {path: 'graphics', component: ArtsComponent},
-  {path: 'animation', component: ArtsComponent},
+  {path: 'animations', component: ArtsComponent},
   {path: 'video', component: VideoComponent},
   {path: 'dishes', component: DishComponent},
   {path: 'dish/:id', component: DishDetailComponent}

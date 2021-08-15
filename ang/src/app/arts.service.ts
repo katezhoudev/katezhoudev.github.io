@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ArtsService {
 
-  drawings = [
+  drawings_8 = [
     {id: 0, desc: 'Flowers'},
     {id: 1, desc: 'pinapple'},
     {id: 2, desc: 'yummy custard pie'},
@@ -68,7 +68,7 @@ export class ArtsService {
     {id: 59, desc: 'a old car'},
     {id: 60, desc: 'dogs'}
   ];
-  graphics = [
+  graphics_8 = [
     {id: 0, desc: 'the world without gravity'},
     {id: 1, desc: 'cookie girl'},
     {id: 2, desc: 'mommy\'s purse'},
@@ -95,7 +95,7 @@ export class ArtsService {
     {id: 23, desc: 'noodles'},
     {id: 24, desc: 'ice cream'}
   ];
-  paintings = [
+  paintings_8 = [
    {id: 0, desc: 'Chritsmas trees'},
    {id: 1, desc: 'A happy bear'},
    {id: 2, desc: 'A water fall'},
@@ -109,21 +109,24 @@ export class ArtsService {
    {id: 10, desc: 'cherry girl'},
    {id: 11, desc: 'blue girl in a blue world'}
   ];
-  animations = [
+  animations_8 = [
     {id: 0, desc: 'flying bird'}
   ];
 
   constructor() { }
 
-  getArts(artType: string): Array<{id: number, desc: string}>{
-    if (artType === 'drawing'){
-      return this.drawings;
-    }else if (artType === 'painting') {
-      return this.paintings;
-    }else if (artType === 'graphics') {
-      return this.graphics;
-    }else {
-      return this.animations;
-    }
+  getArts(artType: string, age: number = 8): Array<{id: number, desc: string}>{
+    // this.arts1 : Array<{id: number, desc: string}> = 
+    return eval("this." +artType + "_" + age);
+    // return arts;
+    // if (artType === 'drawing'){
+    //   return this.drawings;
+    // }else if (artType === 'painting') {
+    //   return this.paintings;
+    // }else if (artType === 'graphics') {
+    //   return this.graphics;
+    // }else {
+    //   return this.animations;
+    // }
   }
 }

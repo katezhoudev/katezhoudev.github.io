@@ -11,6 +11,7 @@ export class ArtsComponent implements OnInit {
 
   arts: {id: number, desc: string}[] = [];
   artType = 'drawing';
+  age = 8;
   displaySlide = false;
   selectedSlideId = 3;
 
@@ -19,11 +20,12 @@ export class ArtsComponent implements OnInit {
 
   ngOnInit(): void {
     this.artType = this.router.url.substr(1);
-    this.setArts(this.artType);
+    this.arts = this.artsService.getArts(this.artType, this.age);
   }
 
-  setArts(artType: string): void {
-    this.arts = this.artsService.getArts(artType);
+
+  ageSelected(age: number){
+    alert(`age selected ${age}`);
   }
 
   showSlide(id: number): void {
