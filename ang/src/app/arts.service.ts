@@ -68,6 +68,25 @@ export class ArtsService {
     {id: 59, desc: 'a old car'},
     {id: 60, desc: 'dogs'}
   ];
+  drawings_9 = [
+    {id: 0, desc: '90% realism'},
+    {id: 1, desc: 'a random cover I made called "Just the Same"'},
+    {id: 2, desc: 'stars'},
+    {id: 3, desc: 'she a shy girl'},
+    {id: 4, desc: 'crying'},
+    {id: 5, desc: 'plants and butterflys'},
+    {id: 6, desc: 'prinesess'},
+    {id: 7, desc: 'lily but drawn with dots'},
+    {id: 8, desc: 'bumps of color'},
+    {id: 9, desc: 'Din'},
+    {id: 10, desc: 'deer girl with plants'},
+    {id: 11, desc: 'Eri from MHA'},
+    {id: 12, desc: 'Melody'},
+    {id: 13, desc: 'CHEAK me out'},
+    {id: 14, desc: 'an apple tree'},
+    {id: 15, desc: 'secret garden'},
+    {id: 16, desc: 'eyes! Everywere'}
+  ];
   graphics_8 = [
     {id: 0, desc: 'the world without gravity'},
     {id: 1, desc: 'cookie girl'},
@@ -95,6 +114,48 @@ export class ArtsService {
     {id: 23, desc: 'noodles'},
     {id: 24, desc: 'ice cream'}
   ];
+  graphics_9 = [
+    {id: 0, desc: 'a witch'},
+    {id: 1, desc: 'girl that is an explorer'},
+    {id: 2, desc: 'minecraft skin idea (doesn not work)'},
+    {id: 3, desc: 'a girl that LOVES green'},
+    {id: 4, desc: 'watercan'},
+    {id: 5, desc: 'greens'},
+    {id: 6, desc: 'abtract girl'},
+    {id: 7, desc: 'glowing'},
+    {id: 8, desc: 'AHH a demon'},
+    {id: 9, desc: 'pretty sky'},
+    {id: 10, desc: 'me and my friend'},
+    {id: 11, desc: 'relistic girl'},
+    {id: 12, desc: 'wow it is raining (new version)'},
+    {id: 13, desc: 'wow it is raining'},
+    {id: 14, desc: 'Denki from MHA'},
+    {id: 15, desc: 'amazed girl'},
+    {id: 16, desc: 'my friend as a gamer:'},
+    {id: 17, desc: 'smurking girl'},
+    {id: 18, desc: 'self portrait of me'},
+    {id: 19, desc: 'girls'},
+    {id: 20, desc: 'Crash!'},
+    {id: 21, desc: 'lavader '},
+    {id: 22, desc: 'I tried a totoural'},
+    {id: 23, desc: 'waves by the shore'},
+    {id: 24, desc: 'logo idea'},
+    {id: 25, desc: 'princes'},
+    {id: 26, desc: 'close-up'},
+    {id: 27, desc: 'elf girl that says hi'},
+    {id: 28, desc: 'whle girl'},
+    {id: 30, desc: 'i tried to do this hack:'},
+    {id: 31, desc: 'a girl that is cofused'},
+    {id: 32, desc: 'a bird that loves the petals'},
+    {id: 33, desc: 'baby bear girl'},
+    {id: 34, desc: 'spooky libary'},
+    {id: 35, desc: 'little fairies with a teenage girl'},
+    {id: 36, desc: 'my dog, Kiwi:'},
+    {id: 37, desc: 'when i am coufused:'},
+    {id: 38, desc: 'France!'},
+    {id: 39, desc: 'my parents'},
+    {id: 40, desc: 'Eri'}
+  ];
   paintings_8 = [
    {id: 0, desc: 'Chritsmas trees'},
    {id: 1, desc: 'A happy bear'},
@@ -109,8 +170,35 @@ export class ArtsService {
    {id: 10, desc: 'cherry girl'},
    {id: 11, desc: 'blue girl in a blue world'}
   ];
+  paintings_9 = [
+    {id: 0, desc: 'leaf girl'},
+    {id: 1, desc: 'candy world(pt.1)'},
+    {id: 2, desc: 'Think'},
+    {id: 3, desc: 'under the sea'},
+    {id: 4, desc: 'cheese with naughty rats'},
+    {id: 5, desc: 'a witch(for holloween)'},
+    {id: 6, desc: 'jelly fish'},
+    {id: 7, desc: 'moon wolf'},
+    {id: 8, desc: 'rabit'},
+    {id: 9, desc: 'cats in space'},
+    {id: 10, desc: 'yin yang cats'}
+   ];
   animations_8 = [
     {id: 0, desc: 'flying bird'}
+  ];
+  animations_9 = [
+    {id: 0, desc: 'I got my eye on you'},
+    {id: 1, desc: 'eggs on a pan to a plate'},
+    {id: 2, desc: 'my FAVORITE! Potatos'},
+    {id: 3, desc: 'Apa from ATLA'},
+    {id: 4, desc: 'why?'},
+    {id: 5, desc: 'pencil factory'},
+    {id: 6, desc: 'flower cycle'},
+    {id: 7, desc: 'what a butifu- AHHHH'},
+    {id: 8, desc: 'even dots are filled with love'},
+    {id: 9, desc: 'AHHH A ATSROID'},
+    {id: 10, desc: 'explorer'},
+    {id: 11, desc: 'blink blink its me'}
   ];
 
   constructor() { }

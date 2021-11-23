@@ -25,7 +25,8 @@ export class ArtsComponent implements OnInit {
 
 
   ageSelected(age: number){
-    alert(`age selected ${age}`);
+    this.age = age;
+    this.arts = this.artsService.getArts(this.artType, this.age);
   }
 
   showSlide(id: number): void {
