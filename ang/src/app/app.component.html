@@ -3,7 +3,7 @@
     <input type="checkbox" id="check" [ngModel]="isChecked" (ngModelChange)="checkboxChanged($event)">
     <label for="check" class="nav-icon"><i class="fas fa-bars"></i></label>
     <div class="logo">
-      <a href="./home"><img src="../assets/logo.png" /></a>
+      <a routerLink="/home" routerLinkActive="active"><img src="../assets/logo.png" /></a>
     </div>
     <div id="mainListDiv" class="main_list">
       <ul class="navlinks">
