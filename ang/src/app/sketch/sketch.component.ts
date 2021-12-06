@@ -89,11 +89,12 @@ export class SketchComponent implements OnInit {
     }
   }
 
-  doFileInput(event: Event) {
-    let file = (event.target as HTMLInputElement).files[0];
+  doFileInput(event: any) {
+    // let file = (event.target as HTMLInputElement).files[0];
+    let file = event.target.files[0];
     var tmppath = URL.createObjectURL(file);
     console.log(tmppath);
-    this.canvas.loadImage(tmppath, img => {
+    this.canvas.loadImage(tmppath, (img: any) => {
       let aspect = img.width / img.height;
       console.log(aspect);
       let drawWidth = 1000;
