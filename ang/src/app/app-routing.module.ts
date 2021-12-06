@@ -5,6 +5,7 @@ import { DishComponent } from './dish/dish.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { VideoComponent } from './video/video.component';
 import { DishDetailComponent} from './dish-detail/dish-detail.component';
+import { SketchComponent } from './sketch/sketch.component';
 
 const routes: Routes = [
   {path: '', component: JumbotronComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'animations', component: ArtsComponent},
   {path: 'video', component: VideoComponent},
   {path: 'dishes', component: DishComponent},
-  {path: 'dish/:id', component: DishDetailComponent}
+  {path: 'dish/:id', component: DishDetailComponent},
+  {path: 'sketch', component: SketchComponent}
 ];
 
 @NgModule({

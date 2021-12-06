@@ -1,0 +1,18 @@
+.sketch-container {
+    margin: 70px 10px 0px 10px;
+}
+
+.sketch-tool-palette {
+    height: 40px;
+    background-color: silver;
+}
+
+#sketch-tool {
+    margin-top: 5px;
+    margin-left: 15px;
+    float: left;
+}
+#sketch-palette {
+    margin-top: 5px;
+    float: right;
+}

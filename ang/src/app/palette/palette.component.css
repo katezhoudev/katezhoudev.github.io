@@ -1,0 +1,37 @@
+.palette-color {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+.palette-color.active {
+    border: solid white 2px
+}
+.palette-color:hover {
+    cursor: pointer;
+}
+
+#palette-color-1 {
+    background-color: rgb(148, 0, 211)
+}
+#palette-color-2 {
+    background-color: rgb(75, 0, 130)
+}
+#palette-color-3 {
+    background-color: rgb(0, 0, 255)
+}
+#palette-color-4 {
+    background-color: rgb(0, 255, 0)
+}
+#palette-color-5 {
+    background-color: rgb(255, 255, 0)
+}
+#palette-color-6 {
+    background-color: rgb(255, 127, 0)
+}
+#palette-color-7 {
+    background-color: rgb(255, 0, 0)
+}
+.palette-container {
+    display: flex;
+    margin-right: 20px
+}

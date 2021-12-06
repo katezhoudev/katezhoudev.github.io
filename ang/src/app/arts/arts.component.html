@@ -1,7 +1,7 @@
 <div id="drawing-container" class="container pt-5" style="display: block;">
   <div class="d-flex flex-wrap align-items-center justify-content-center">
     <div *ngFor="let art of arts" class="card mb-5">
-      <img class="img-fluid" id={{art.id}} (click)="showSlide(art.id)"
+      <img class="img-fluid" id={{art.id}} (click)="showSlide(art.id, age)"
           src="../assets/arts/{{artType}}/a{{age}}/{{artType}}{{art.id}}-512.{{artType==='animations'?'gif':'png'}}" loading="lazy">
       <p class="card-footer">{{art.desc}}</p>
     </div>

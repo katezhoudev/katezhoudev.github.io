@@ -11,7 +11,9 @@ import { DishService } from './dish.service';
 import { DishComponent } from './dish/dish.component';
 import { DishDetailComponent } from './dish-detail/dish-detail.component';
 import { AgeSelectorComponent } from './age-selector/age-selector/age-selector.component';
-
+import { SketchComponent } from './sketch/sketch.component';
+import { PaletteComponent } from './palette/palette.component';
+import { SketchToolComponent } from './sketch-tool/sketch-tool.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,9 @@ import { AgeSelectorComponent } from './age-selector/age-selector/age-selector.c
     DishComponent,
     DishDetailComponent,
     AgeSelectorComponent,
+    SketchComponent,
+    PaletteComponent,
+    SketchToolComponent
   ],
   imports: [
     BrowserModule,
@@ -31,4 +36,5 @@ import { AgeSelectorComponent } from './age-selector/age-selector/age-selector.c
   providers: [ ArtsService, DishService ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

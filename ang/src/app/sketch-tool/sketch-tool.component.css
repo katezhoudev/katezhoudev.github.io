@@ -1,0 +1,28 @@
+.sketch-tool-container {
+    display: flex;
+    margin-left: 15px
+}
+.sketch-tool {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    font-size: 20px;
+    color: blueviolet;
+    background-color: lightgray;
+    text-align: center;
+    line-height: 30px;
+}
+.sketch-tool.active {
+    background-color: white;
+}
+.sketch-tool:hover {
+    cursor: pointer;
+}
+
+#sketch-tool-pencil {
+
+}
+#sketch-tool-eraser {
+}
+#sketch-tool-image {
+}

@@ -29,7 +29,7 @@ export class ArtsComponent implements OnInit {
     this.arts = this.artsService.getArts(this.artType, this.age);
   }
 
-  showSlide(id: number): void {
+  showSlide(id: number, age: number): void {
     this.artType = this.router.url.substr(1);
     this.selectedSlideId = id;
     this.displaySlide = true;

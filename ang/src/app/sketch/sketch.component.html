@@ -1,0 +1,9 @@
+<div class="sketch-container">    
+    <p>click your mouse to draw, type 'c' on your keyboard to clear</p>
+    <div id="sketch-holder"></div>
+    <div class="sketch-tool-palette">
+        <app-sketch-tool id="sketch-tool" (toolSelected)="changeTool($event)"></app-sketch-tool>
+        <app-palette id="sketch-palette" (colorSelected)="changeColor($event)"></app-palette>
+        <input id="sketch-image-input" type="file" hidden (change)="doFileInput($event)">
+    </div>
+</div>
