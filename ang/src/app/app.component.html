@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <nav class="nav">
     <input type="checkbox" id="check" [ngModel]="isChecked" (ngModelChange)="checkboxChanged($event)">
-    <label for="check" class="nav-icon"><i class="fas fa-bars"></i></label>
+    <label for="check" class="nav-icon"><i><fa-icon [icon]="faBars"></fa-icon></i></label>
     <div class="logo">
       <a routerLink="/home" routerLinkActive="active"><img src="../assets/logo.png" /></a>
     </div>

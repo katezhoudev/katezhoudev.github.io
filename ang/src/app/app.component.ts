@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,8 @@ export class AppComponent implements OnInit, AfterViewInit{
   title = 'kate-site';
   artType = 'drawing';
   isChecked = false;
+
+  faBars = faBars;
 
   constructor(private router: Router) { }
 

@@ -14,6 +14,7 @@ import { AgeSelectorComponent } from './age-selector/age-selector/age-selector.c
 import { SketchComponent } from './sketch/sketch.component';
 import { PaletteComponent } from './palette/palette.component';
 import { SketchToolComponent } from './sketch-tool/sketch-tool.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SketchToolComponent } from './sketch-tool/sketch-tool.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [ ArtsService, DishService ],
   bootstrap: [AppComponent]

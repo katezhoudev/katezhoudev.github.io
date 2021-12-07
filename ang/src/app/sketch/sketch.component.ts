@@ -11,12 +11,14 @@ export class SketchComponent implements OnInit {
 
   free_draw: ()=>void;
   pencil_keyPressed: ()=>void;
+  pencil_touchStarted : ()=> boolean;
   pencil_draw: ()=>void;
   eraser_draw: ()=>void;
 
   constructor() {
     this.free_draw = () => {};
     this.pencil_keyPressed = () => {};
+    this.pencil_touchStarted = () => {return false};
     this.pencil_draw = () => {};
     this.eraser_draw = () => {};
    }
@@ -27,10 +29,9 @@ export class SketchComponent implements OnInit {
         let canvasWidth = document.getElementById('sketch-holder')?.clientWidth;
         let canvas2 = s.createCanvas(canvasWidth, s.windowHeight-160);
         canvas2.parent('sketch-holder');
-
+        s.canvas2 = canvas2;
         s.background(255);
-        s.strokeWeight(2);
-        s.rect(0, 0, s.width, s.height);
+        s.strokeWeight(4);
         s.stroke([148, 0, 211]);
       };
       s.mouseReleased = () => {
@@ -40,10 +41,17 @@ export class SketchComponent implements OnInit {
     this.canvas = new p5(sketch);
 
     this.pencil_keyPressed = () => {
-      if (this.canvas.key === 'd') {
+      if (this.canvas.key === 'c') {
         window.location.reload();
+      } else if (this.canvas.key === 's') {
+        this.canvas.saveCanvas(this.canvas.canvas2, 'kiwi', 'jpg');
       }
     };
+
+    this.pencil_touchStarted = () => {
+      this.pencil_keyPressed();
+      return false;
+    }
     
     this.free_draw = () => {
       if (this.canvas.mouseIsPressed) {
@@ -55,7 +63,7 @@ export class SketchComponent implements OnInit {
 
     this.pencil_draw = () => {
       this.canvas.noErase();
-      this.canvas.strokeWeight(2);
+      this.canvas.strokeWeight(4);
       this.free_draw();
     }
 
@@ -67,6 +75,7 @@ export class SketchComponent implements OnInit {
 
     this.canvas.draw = this.pencil_draw;
     this.canvas.keyPressed = this.pencil_keyPressed;
+    this.canvas.touchStarted = this.pencil_touchStarted;
   }
 
   changeColor($event: [number, number, number]) {
@@ -90,14 +99,11 @@ export class SketchComponent implements OnInit {
   }
 
   doFileInput(event: any) {
-    // let file = (event.target as HTMLInputElement).files[0];
     let file = event.target.files[0];
     var tmppath = URL.createObjectURL(file);
     console.log(tmppath);
     this.canvas.loadImage(tmppath, (img: any) => {
       let aspect = img.width / img.height;
-      console.log(aspect);
-      let drawWidth = 1000;
-      this.canvas.image(img, 0, 0, drawWidth, drawWidth/aspect, 0, 0, img.width, img.height)});
+      this.canvas.image(img, (this.canvas.width-this.canvas.height*aspect)/2.0, 0, this.canvas.height*aspect, this.canvas.height, 0, 0, img.width, img.height)});
   }
 }

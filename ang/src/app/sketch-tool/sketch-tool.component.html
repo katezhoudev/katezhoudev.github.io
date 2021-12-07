@@ -1,11 +1,11 @@
 <div class="sketch-tool-container">
     <div id="sketch-tool-pencil" class="sketch-tool active" (click)="pickTool($event)">
-        <i class="fas fa-pencil-alt" aria-hidden="true" title="pencil"></i>
+        <fa-icon [icon]="faPencilAlt"></fa-icon>
     </div>
     <div id="sketch-tool-eraser" class="sketch-tool" (click)="pickTool($event)">
-        <i class="fas fa-eraser" aria-hidden="true" title="eraser"></i>
+        <fa-icon [icon]="faEraser"></fa-icon>
     </div>
     <div id="sketch-tool-image" class="sketch-tool" (click)="pickTool($event)">
-        <i class="fas fa-image" aria-hidden="true" title="load image"></i>
+        <fa-icon [icon]="faImage"></fa-icon>
     </div>   
 </div>
