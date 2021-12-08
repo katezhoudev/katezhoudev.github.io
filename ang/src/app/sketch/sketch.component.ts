@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import * as p5 from 'p5';
 
 @Component({
@@ -6,19 +6,21 @@ import * as p5 from 'p5';
   templateUrl: './sketch.component.html',
   styleUrls: ['./sketch.component.css']
 })
-export class SketchComponent implements OnInit {
+export class SketchComponent implements OnInit, OnDestroy {
   canvas: any;
 
   free_draw: ()=>void;
   pencil_keyPressed: ()=>void;
-  pencil_touchStarted : ()=> boolean;
+  pencil_touchStarted: ()=>boolean;
+  pencil_touchEnded: ()=>boolean;
   pencil_draw: ()=>void;
   eraser_draw: ()=>void;
 
   constructor() {
     this.free_draw = () => {};
     this.pencil_keyPressed = () => {};
-    this.pencil_touchStarted = () => {return false};
+    this.pencil_touchStarted = () => {return true};
+    this.pencil_touchEnded = () => {return true};
     this.pencil_draw = () => {};
     this.eraser_draw = () => {};
    }
@@ -47,11 +49,6 @@ export class SketchComponent implements OnInit {
         this.canvas.saveCanvas(this.canvas.canvas2, 'kiwi', 'jpg');
       }
     };
-
-    this.pencil_touchStarted = () => {
-      this.pencil_keyPressed();
-      return false;
-    }
     
     this.free_draw = () => {
       if (this.canvas.mouseIsPressed) {
@@ -76,6 +73,15 @@ export class SketchComponent implements OnInit {
     this.canvas.draw = this.pencil_draw;
     this.canvas.keyPressed = this.pencil_keyPressed;
     this.canvas.touchStarted = this.pencil_touchStarted;
+    this.canvas.touchEnded = this.pencil_touchEnded;
+    this.canvas.touchMoved = () => {
+      this.canvas.line(this.canvas.mouseX, this.canvas.mouseY, this.canvas.pmouseX, this.canvas.pmouseY);
+      return false;
+    };
+  }
+
+  ngOnDestroy() {
+    this.canvas.touchMoved = () => {return true};
   }
 
   changeColor($event: [number, number, number]) {
