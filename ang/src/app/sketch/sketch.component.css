@@ -16,3 +16,9 @@
     margin-top: 5px;
     float: right;
 }
+
+@media (max-width: 950px) {
+    #sketch-tool {
+        margin-left: 0px;
+    }
+}

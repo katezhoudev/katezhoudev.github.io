@@ -1,5 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import * as p5 from 'p5';
+import pencil from './pencil';
+import eraser from './eraser';
+import sketchState from './sketchState';
 
 @Component({
   selector: 'app-sketch',
@@ -8,22 +11,13 @@ import * as p5 from 'p5';
 })
 export class SketchComponent implements OnInit, OnDestroy {
   canvas: any;
-
-  free_draw: ()=>void;
-  pencil_keyPressed: ()=>void;
-  pencil_touchStarted: ()=>boolean;
-  pencil_touchEnded: ()=>boolean;
-  pencil_draw: ()=>void;
-  eraser_draw: ()=>void;
+  pencil: any;
+  eraser: any;
+  sketchState: any;
 
   constructor() {
-    this.free_draw = () => {};
-    this.pencil_keyPressed = () => {};
-    this.pencil_touchStarted = () => {return true};
-    this.pencil_touchEnded = () => {return true};
-    this.pencil_draw = () => {};
-    this.eraser_draw = () => {};
-   }
+    this.sketchState = new sketchState();
+  }
 
   ngOnInit(): void {
     const sketch = (s:any) => {
@@ -35,49 +29,20 @@ export class SketchComponent implements OnInit, OnDestroy {
         s.background(255);
         s.strokeWeight(4);
         s.stroke([148, 0, 211]);
+        this.sketchState.addState(this.canvas.get());
+      };
+      s.mousePressed = () => {
       };
       s.mouseReleased = () => {
+          this.sketchState.addState(this.canvas.get());
       };
     };
 
     this.canvas = new p5(sketch);
+    this.pencil = new pencil(this.canvas, this.sketchState);
+    this.eraser = new eraser(this.canvas);
 
-    this.pencil_keyPressed = () => {
-      if (this.canvas.key === 'c') {
-        window.location.reload();
-      } else if (this.canvas.key === 's') {
-        this.canvas.saveCanvas(this.canvas.canvas2, 'kiwi', 'jpg');
-      }
-    };
-    
-    this.free_draw = () => {
-      if (this.canvas.mouseIsPressed) {
-        if (this.canvas.mouseButton === this.canvas.LEFT) {
-          this.canvas.line(this.canvas.mouseX, this.canvas.mouseY, this.canvas.pmouseX, this.canvas.pmouseY);
-        }
-      }
-    };
-
-    this.pencil_draw = () => {
-      this.canvas.noErase();
-      this.canvas.strokeWeight(4);
-      this.free_draw();
-    }
-
-    this.eraser_draw = () => {
-      this.canvas.erase();
-      this.canvas.strokeWeight(10);
-      this.free_draw();
-    }
-
-    this.canvas.draw = this.pencil_draw;
-    this.canvas.keyPressed = this.pencil_keyPressed;
-    this.canvas.touchStarted = this.pencil_touchStarted;
-    this.canvas.touchEnded = this.pencil_touchEnded;
-    this.canvas.touchMoved = () => {
-      this.canvas.line(this.canvas.mouseX, this.canvas.mouseY, this.canvas.pmouseX, this.canvas.pmouseY);
-      return false;
-    };
+    this.pencil.useit();
   }
 
   ngOnDestroy() {
@@ -91,16 +56,16 @@ export class SketchComponent implements OnInit, OnDestroy {
   changeTool($event: string) {
     switch ($event) {
       case "sketch-tool-pencil":
-        this.canvas.draw = this.pencil_draw;
+        this.pencil.useit();
         break;
       case "sketch-tool-eraser":
-        this.canvas.draw = this.eraser_draw;
+        this.eraser.useit();
         break;
       case "sketch-tool-image":
         document.getElementById('sketch-image-input')?.click();
         break;
       default:
-        this.canvas.draw = this.pencil_draw;
+        this.pencil.useit();
     }
   }
 

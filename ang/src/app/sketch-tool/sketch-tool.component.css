@@ -26,3 +26,9 @@
 }
 #sketch-tool-image {
 }
+
+@media (max-width: 950px) {
+    .sketch-tool-container {
+       margin-left: 5px
+    }
+}
