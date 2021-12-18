@@ -37,9 +37,14 @@ export default class pencil {
         return false;
       };
 
+    mouseReleased() {
+      this.sketchState.addState(this.canvas.get());
+    }
+
     useit() {
         this.canvas.draw = this.draw.bind(this);
         this.canvas.keyPressed = this.keyPressed.bind(this);
         this.canvas.touchMoved = this.touchMoved.bind(this);
+        this.canvas.mouseReleased = this.mouseReleased.bind(this);
     }
 }

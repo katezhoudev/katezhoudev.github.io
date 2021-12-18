@@ -14,12 +14,16 @@ export class SketchComponent implements OnInit, OnDestroy {
   pencil: any;
   eraser: any;
   sketchState: any;
+  firstClick: boolean;
 
   constructor() {
+    this.firstClick = true;
     this.sketchState = new sketchState();
+    console.log("sketch constructor");
   }
 
   ngOnInit(): void {
+    console.log("sketch ngoninit start");
     const sketch = (s:any) => {
       s.setup = () => {
         let canvasWidth = document.getElementById('sketch-holder')?.clientWidth;
@@ -29,24 +33,43 @@ export class SketchComponent implements OnInit, OnDestroy {
         s.background(255);
         s.strokeWeight(4);
         s.stroke([148, 0, 211]);
-        this.sketchState.addState(this.canvas.get());
       };
       s.mousePressed = () => {
+        if(this.firstClick){
+          this.sketchState.addState(this.canvas.get());
+          this.firstClick = false;
+        }      
       };
       s.mouseReleased = () => {
-          this.sketchState.addState(this.canvas.get());
       };
     };
 
+    console.log("sketch before create canvas");
     this.canvas = new p5(sketch);
+    console.log(this.canvas);
+    console.log("sketch after create canvas");
     this.pencil = new pencil(this.canvas, this.sketchState);
     this.eraser = new eraser(this.canvas);
 
     this.pencil.useit();
+    console.log("sketch ngoninit");
+  }
+
+  captureCanvas () {
+    let capture = null
+    try {
+      capture = this.canvas.get();
+    }
+    catch (err) {
+      return null;
+    }
+    return capture;
   }
 
   ngOnDestroy() {
     this.canvas.touchMoved = () => {return true};
+    this.canvas.remove();
+    console.log("sketch ngondestroy");
   }
 
   changeColor($event: [number, number, number]) {
